@@ -1,24 +1,33 @@
+# workflow configurations
+tags
+
 # exhaust from running configure script
-Makefile
+**/Makefile
 config.log
 config.status
 include/stamp-h1
 include/ta_config.h
 libtool
 src/Makefile
-src/ta_abstract/.deps/
 src/ta_abstract/Makefile
-src/ta_common/.deps/
 src/ta_common/Makefile
-src/ta_func/.deps/
 src/ta_func/Makefile
 src/tools/Makefile
-src/tools/gen_code/.deps/
 src/tools/gen_code/Makefile
-src/tools/ta_regtest/.deps/
 src/tools/ta_regtest/Makefile
 ta-lib-config
 ta-lib.dpkg
 ta-lib.spec
 
+# dependencies
 **/.deps*
+**/.libs*
+
+# make/build exhaust
+*.l
+*.lo
+*.o
+*.la
+bin
+src/tools/gen_code/gen_code
+src/tools/ta_regtest/ta_regtest
