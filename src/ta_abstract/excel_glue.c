@@ -37,7 +37,7 @@
  * If you are not re-building the excel library (which is most
  * likely the case), just ignore this file.
  */
- 
+
 EXCEL_GLUE_CODE_WITH_1_PARAM(ACOS)
 EXCEL_GLUE_CODE_WITH_4_PARAM(AD)
 EXCEL_GLUE_CODE_WITH_2_PARAM(ADD)

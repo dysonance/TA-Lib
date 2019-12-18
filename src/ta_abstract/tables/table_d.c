@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'D' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -49,78 +49,55 @@
  ****************************************************************************/
 
 /* DEMA BEGIN */
-static const TA_InputParameterInfo    *TA_DEMA_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Real,
-  NULL
-};
+static const TA_InputParameterInfo *TA_DEMA_Inputs[] = {&TA_DEF_UI_Input_Real,
+                                                        NULL};
 
-static const TA_OutputParameterInfo   *TA_DEMA_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_DEMA_Outputs[] = {
+    &TA_DEF_UI_Output_Real, NULL};
 
-static const TA_OptInputParameterInfo *TA_DEMA_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_30_MINIMUM2,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_DEMA_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_30_MINIMUM2, NULL};
 
-DEF_FUNCTION( DEMA,                       /* name */
-              TA_GroupId_OverlapStudies,  /* groupId */
-              "Double Exponential Moving Average", /* hint */
-              "Dema",                     /* CamelCase name */
-              TA_FUNC_FLG_OVERLAP         /* flags */
-             );
+DEF_FUNCTION(DEMA,                                /* name */
+             TA_GroupId_OverlapStudies,           /* groupId */
+             "Double Exponential Moving Average", /* hint */
+             "Dema",                              /* CamelCase name */
+             TA_FUNC_FLG_OVERLAP                  /* flags */
+);
 /* DEMA END */
 
 /* DIV BEGIN */
-DEF_MATH_BINARY_OPERATOR( DIV, "Vector Arithmetic Div", "Div" )
+DEF_MATH_BINARY_OPERATOR(DIV, "Vector Arithmetic Div", "Div")
 /* DIV END */
 
 /* DX BEGIN */
-static const TA_InputParameterInfo    *TA_DX_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Price_HLC,
-  NULL
-};
+static const TA_InputParameterInfo *TA_DX_Inputs[] = {
+    &TA_DEF_UI_Input_Price_HLC, NULL};
 
-static const TA_OutputParameterInfo   *TA_DX_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_DX_Outputs[] = {&TA_DEF_UI_Output_Real,
+                                                        NULL};
 
-static const TA_OptInputParameterInfo *TA_DX_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_14_MINIMUM2,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_DX_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_14_MINIMUM2, NULL};
 
-DEF_FUNCTION( DX,                           /* name */
-              TA_GroupId_MomentumIndicators,   /* groupId */
-              "Directional Movement Index", /* hint */
-              "Dx",                         /* CamelCase name */
-              TA_FUNC_FLG_UNST_PER          /* flags */
-             );
+DEF_FUNCTION(DX,                            /* name */
+             TA_GroupId_MomentumIndicators, /* groupId */
+             "Directional Movement Index",  /* hint */
+             "Dx",                          /* CamelCase name */
+             TA_FUNC_FLG_UNST_PER           /* flags */
+);
 /* DX END */
 
 /****************************************************************************
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableD[] =
-{
-   ADD_TO_TABLE(DEMA),
-   ADD_TO_TABLE(DIV),
-   ADD_TO_TABLE(DX),
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableD[] = {ADD_TO_TABLE(DEMA), ADD_TO_TABLE(DIV),
+                                     ADD_TO_TABLE(DX), NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableDSize =
-              ((sizeof(TA_DEF_TableD)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableD) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other

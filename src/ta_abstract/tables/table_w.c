@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'W' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -49,78 +49,56 @@
  ****************************************************************************/
 
 /* WCL BEGIN */
-static const TA_InputParameterInfo    *TA_WCLPRICE_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Price_HLC,
-  NULL
-};
+static const TA_InputParameterInfo *TA_WCLPRICE_Inputs[] = {
+    &TA_DEF_UI_Input_Price_HLC, NULL};
 
-static const TA_OutputParameterInfo   *TA_WCLPRICE_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_WCLPRICE_Outputs[] = {
+    &TA_DEF_UI_Output_Real, NULL};
 
-static const TA_OptInputParameterInfo *TA_WCLPRICE_OptInputs[] = { NULL };
+static const TA_OptInputParameterInfo *TA_WCLPRICE_OptInputs[] = {NULL};
 
-DEF_FUNCTION( WCLPRICE,                   /* name */
-              TA_GroupId_PriceTransform,  /* groupId */
-              "Weighted Close Price",     /* hint */
-              "WclPrice",                 /* CamelCase name */
-              TA_FUNC_FLG_OVERLAP         /* flags */
-             );
+DEF_FUNCTION(WCLPRICE,                  /* name */
+             TA_GroupId_PriceTransform, /* groupId */
+             "Weighted Close Price",    /* hint */
+             "WclPrice",                /* CamelCase name */
+             TA_FUNC_FLG_OVERLAP        /* flags */
+);
 /* WCL END */
 
 /* WILLR BEGIN */
-static const TA_InputParameterInfo    *TA_WILLR_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Price_HLC,
-  NULL
-};
+static const TA_InputParameterInfo *TA_WILLR_Inputs[] = {
+    &TA_DEF_UI_Input_Price_HLC, NULL};
 
-static const TA_OutputParameterInfo   *TA_WILLR_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_WILLR_Outputs[] = {
+    &TA_DEF_UI_Output_Real, NULL};
 
-static const TA_OptInputParameterInfo *TA_WILLR_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_14_MINIMUM2,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_WILLR_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_14_MINIMUM2, NULL};
 
-DEF_FUNCTION( WILLR,          /* name */
-              TA_GroupId_MomentumIndicators,  /* groupId */
-              "Williams' %R", /* hint */
-              "WillR",        /* CamelCase name */
-              0               /* flags */              
-             );
+DEF_FUNCTION(WILLR,                         /* name */
+             TA_GroupId_MomentumIndicators, /* groupId */
+             "Williams' %R",                /* hint */
+             "WillR",                       /* CamelCase name */
+             0                              /* flags */
+);
 /* WILLR END */
 
 /* WMA BEGIN */
-static const TA_InputParameterInfo    *TA_WMA_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Real,
-  NULL
-};
+static const TA_InputParameterInfo *TA_WMA_Inputs[] = {&TA_DEF_UI_Input_Real,
+                                                       NULL};
 
-static const TA_OutputParameterInfo   *TA_WMA_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_WMA_Outputs[] = {&TA_DEF_UI_Output_Real,
+                                                         NULL};
 
-static const TA_OptInputParameterInfo *TA_WMA_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_30_MINIMUM2,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_WMA_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_30_MINIMUM2, NULL};
 
-DEF_FUNCTION( WMA,                        /* name */
-              TA_GroupId_OverlapStudies,  /* groupId */
-              "Weighted Moving Average",  /* hint */
-              "Wma",                      /* CamelCase name */
-              TA_FUNC_FLG_OVERLAP         /* flags */              
-             );
+DEF_FUNCTION(WMA,                       /* name */
+             TA_GroupId_OverlapStudies, /* groupId */
+             "Weighted Moving Average", /* hint */
+             "Wma",                     /* CamelCase name */
+             TA_FUNC_FLG_OVERLAP        /* flags */
+);
 
 /* WMA END */
 
@@ -128,19 +106,12 @@ DEF_FUNCTION( WMA,                        /* name */
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableW[] =
-{
-   ADD_TO_TABLE(WCLPRICE),
-   ADD_TO_TABLE(WILLR),
-   ADD_TO_TABLE(WMA),
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableW[] = {
+    ADD_TO_TABLE(WCLPRICE), ADD_TO_TABLE(WILLR), ADD_TO_TABLE(WMA), NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableWSize =
-              ((sizeof(TA_DEF_TableW)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableW) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other

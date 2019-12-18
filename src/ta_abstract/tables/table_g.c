@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'G' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -54,16 +54,11 @@
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableG[] =
-{
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableG[] = {NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableGSize =
-              ((sizeof(TA_DEF_TableG)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableG) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other

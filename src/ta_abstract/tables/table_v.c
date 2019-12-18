@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'V' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -49,47 +49,32 @@
  ****************************************************************************/
 
 /* VAR BEGIN */
-static const TA_InputParameterInfo    *TA_VAR_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Real,
-  NULL
-};
+static const TA_InputParameterInfo *TA_VAR_Inputs[] = {&TA_DEF_UI_Input_Real,
+                                                       NULL};
 
-static const TA_OutputParameterInfo   *TA_VAR_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_VAR_Outputs[] = {&TA_DEF_UI_Output_Real,
+                                                         NULL};
 
-static const TA_OptInputParameterInfo *TA_VAR_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_5,
-  &TA_DEF_UI_NbDeviation,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_VAR_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_5, &TA_DEF_UI_NbDeviation, NULL};
 
-DEF_FUNCTION( VAR,                      /* name */
-              TA_GroupId_Statistic,     /* groupId */
-              "Variance",               /* hint */
-              "Variance",               /* CamelCase name */
-              0                         /* flags */
-             );
+DEF_FUNCTION(VAR,                  /* name */
+             TA_GroupId_Statistic, /* groupId */
+             "Variance",           /* hint */
+             "Variance",           /* CamelCase name */
+             0                     /* flags */
+);
 /* VAR END */
 
 /****************************************************************************
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableV[] =
-{
-   ADD_TO_TABLE(VAR),
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableV[] = {ADD_TO_TABLE(VAR), NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableVSize =
-              ((sizeof(TA_DEF_TableV)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableV) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other

@@ -44,9 +44,9 @@
  * These constant allows mainly to speed optimize functionality related to
  * sequential access to TA_DefFunc by TA_GroupId (see ta_abstract.c)
  */
-#include <stddef.h>
-#include "ta_def_ui.h"
 #include "ta_abstract.h"
+#include "ta_def_ui.h"
+#include <stddef.h>
 
 extern const TA_FuncDef TA_DEF_ACOS;
 extern const TA_FuncDef TA_DEF_AD;
@@ -208,239 +208,130 @@ extern const TA_FuncDef TA_DEF_WILLR;
 extern const TA_FuncDef TA_DEF_WMA;
 
 const TA_FuncDef *TA_PerGroupFunc_0[] = {
-&TA_DEF_ADD,
-&TA_DEF_DIV,
-&TA_DEF_MAX,
-&TA_DEF_MAXINDEX,
-&TA_DEF_MIN,
-&TA_DEF_MININDEX,
-&TA_DEF_MINMAX,
-&TA_DEF_MINMAXINDEX,
-&TA_DEF_MULT,
-&TA_DEF_SUB,
-&TA_DEF_SUM,
-NULL };
-#define SIZE_GROUP_0 ((sizeof(TA_PerGroupFunc_0)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_ADD,  &TA_DEF_DIV,      &TA_DEF_MAX,    &TA_DEF_MAXINDEX,
+    &TA_DEF_MIN,  &TA_DEF_MININDEX, &TA_DEF_MINMAX, &TA_DEF_MINMAXINDEX,
+    &TA_DEF_MULT, &TA_DEF_SUB,      &TA_DEF_SUM,    NULL};
+#define SIZE_GROUP_0                                                           \
+  ((sizeof(TA_PerGroupFunc_0) / sizeof(const TA_FuncDef *)) - 1)
 
 const TA_FuncDef *TA_PerGroupFunc_1[] = {
-&TA_DEF_ACOS,
-&TA_DEF_ASIN,
-&TA_DEF_ATAN,
-&TA_DEF_CEIL,
-&TA_DEF_COS,
-&TA_DEF_COSH,
-&TA_DEF_EXP,
-&TA_DEF_FLOOR,
-&TA_DEF_LN,
-&TA_DEF_LOG10,
-&TA_DEF_SIN,
-&TA_DEF_SINH,
-&TA_DEF_SQRT,
-&TA_DEF_TAN,
-&TA_DEF_TANH,
-NULL };
-#define SIZE_GROUP_1 ((sizeof(TA_PerGroupFunc_1)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_ACOS, &TA_DEF_ASIN,  &TA_DEF_ATAN, &TA_DEF_CEIL,
+    &TA_DEF_COS,  &TA_DEF_COSH,  &TA_DEF_EXP,  &TA_DEF_FLOOR,
+    &TA_DEF_LN,   &TA_DEF_LOG10, &TA_DEF_SIN,  &TA_DEF_SINH,
+    &TA_DEF_SQRT, &TA_DEF_TAN,   &TA_DEF_TANH, NULL};
+#define SIZE_GROUP_1                                                           \
+  ((sizeof(TA_PerGroupFunc_1) / sizeof(const TA_FuncDef *)) - 1)
 
 const TA_FuncDef *TA_PerGroupFunc_2[] = {
-&TA_DEF_BBANDS,
-&TA_DEF_DEMA,
-&TA_DEF_EMA,
-&TA_DEF_HT_TRENDLINE,
-&TA_DEF_KAMA,
-&TA_DEF_MA,
-&TA_DEF_MAMA,
-&TA_DEF_MAVP,
-&TA_DEF_MIDPOINT,
-&TA_DEF_MIDPRICE,
-&TA_DEF_SAR,
-&TA_DEF_SAREXT,
-&TA_DEF_SMA,
-&TA_DEF_T3,
-&TA_DEF_TEMA,
-&TA_DEF_TRIMA,
-&TA_DEF_WMA,
-NULL };
-#define SIZE_GROUP_2 ((sizeof(TA_PerGroupFunc_2)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_BBANDS,       &TA_DEF_DEMA, &TA_DEF_EMA,
+    &TA_DEF_HT_TRENDLINE, &TA_DEF_KAMA, &TA_DEF_MA,
+    &TA_DEF_MAMA,         &TA_DEF_MAVP, &TA_DEF_MIDPOINT,
+    &TA_DEF_MIDPRICE,     &TA_DEF_SAR,  &TA_DEF_SAREXT,
+    &TA_DEF_SMA,          &TA_DEF_T3,   &TA_DEF_TEMA,
+    &TA_DEF_TRIMA,        &TA_DEF_WMA,  NULL};
+#define SIZE_GROUP_2                                                           \
+  ((sizeof(TA_PerGroupFunc_2) / sizeof(const TA_FuncDef *)) - 1)
 
-const TA_FuncDef *TA_PerGroupFunc_3[] = {
-&TA_DEF_ATR,
-&TA_DEF_NATR,
-&TA_DEF_TRANGE,
-NULL };
-#define SIZE_GROUP_3 ((sizeof(TA_PerGroupFunc_3)/sizeof(const TA_FuncDef *))-1)
+const TA_FuncDef *TA_PerGroupFunc_3[] = {&TA_DEF_ATR, &TA_DEF_NATR,
+                                         &TA_DEF_TRANGE, NULL};
+#define SIZE_GROUP_3                                                           \
+  ((sizeof(TA_PerGroupFunc_3) / sizeof(const TA_FuncDef *)) - 1)
 
 const TA_FuncDef *TA_PerGroupFunc_4[] = {
-&TA_DEF_ADX,
-&TA_DEF_ADXR,
-&TA_DEF_APO,
-&TA_DEF_AROON,
-&TA_DEF_AROONOSC,
-&TA_DEF_BOP,
-&TA_DEF_CCI,
-&TA_DEF_CMO,
-&TA_DEF_DX,
-&TA_DEF_MACD,
-&TA_DEF_MACDEXT,
-&TA_DEF_MACDFIX,
-&TA_DEF_MFI,
-&TA_DEF_MINUS_DI,
-&TA_DEF_MINUS_DM,
-&TA_DEF_MOM,
-&TA_DEF_PLUS_DI,
-&TA_DEF_PLUS_DM,
-&TA_DEF_PPO,
-&TA_DEF_ROC,
-&TA_DEF_ROCP,
-&TA_DEF_ROCR,
-&TA_DEF_ROCR100,
-&TA_DEF_RSI,
-&TA_DEF_STOCH,
-&TA_DEF_STOCHF,
-&TA_DEF_STOCHRSI,
-&TA_DEF_TRIX,
-&TA_DEF_ULTOSC,
-&TA_DEF_WILLR,
-NULL };
-#define SIZE_GROUP_4 ((sizeof(TA_PerGroupFunc_4)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_ADX,   &TA_DEF_ADXR,     &TA_DEF_APO,
+    &TA_DEF_AROON, &TA_DEF_AROONOSC, &TA_DEF_BOP,
+    &TA_DEF_CCI,   &TA_DEF_CMO,      &TA_DEF_DX,
+    &TA_DEF_MACD,  &TA_DEF_MACDEXT,  &TA_DEF_MACDFIX,
+    &TA_DEF_MFI,   &TA_DEF_MINUS_DI, &TA_DEF_MINUS_DM,
+    &TA_DEF_MOM,   &TA_DEF_PLUS_DI,  &TA_DEF_PLUS_DM,
+    &TA_DEF_PPO,   &TA_DEF_ROC,      &TA_DEF_ROCP,
+    &TA_DEF_ROCR,  &TA_DEF_ROCR100,  &TA_DEF_RSI,
+    &TA_DEF_STOCH, &TA_DEF_STOCHF,   &TA_DEF_STOCHRSI,
+    &TA_DEF_TRIX,  &TA_DEF_ULTOSC,   &TA_DEF_WILLR,
+    NULL};
+#define SIZE_GROUP_4                                                           \
+  ((sizeof(TA_PerGroupFunc_4) / sizeof(const TA_FuncDef *)) - 1)
 
 const TA_FuncDef *TA_PerGroupFunc_5[] = {
-&TA_DEF_HT_DCPERIOD,
-&TA_DEF_HT_DCPHASE,
-&TA_DEF_HT_PHASOR,
-&TA_DEF_HT_SINE,
-&TA_DEF_HT_TRENDMODE,
-NULL };
-#define SIZE_GROUP_5 ((sizeof(TA_PerGroupFunc_5)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_HT_DCPERIOD, &TA_DEF_HT_DCPHASE,   &TA_DEF_HT_PHASOR,
+    &TA_DEF_HT_SINE,     &TA_DEF_HT_TRENDMODE, NULL};
+#define SIZE_GROUP_5                                                           \
+  ((sizeof(TA_PerGroupFunc_5) / sizeof(const TA_FuncDef *)) - 1)
 
-const TA_FuncDef *TA_PerGroupFunc_6[] = {
-&TA_DEF_AD,
-&TA_DEF_ADOSC,
-&TA_DEF_OBV,
-NULL };
-#define SIZE_GROUP_6 ((sizeof(TA_PerGroupFunc_6)/sizeof(const TA_FuncDef *))-1)
+const TA_FuncDef *TA_PerGroupFunc_6[] = {&TA_DEF_AD, &TA_DEF_ADOSC, &TA_DEF_OBV,
+                                         NULL};
+#define SIZE_GROUP_6                                                           \
+  ((sizeof(TA_PerGroupFunc_6) / sizeof(const TA_FuncDef *)) - 1)
 
 const TA_FuncDef *TA_PerGroupFunc_7[] = {
-&TA_DEF_CDL2CROWS,
-&TA_DEF_CDL3BLACKCROWS,
-&TA_DEF_CDL3INSIDE,
-&TA_DEF_CDL3LINESTRIKE,
-&TA_DEF_CDL3OUTSIDE,
-&TA_DEF_CDL3STARSINSOUTH,
-&TA_DEF_CDL3WHITESOLDIERS,
-&TA_DEF_CDLABANDONEDBABY,
-&TA_DEF_CDLADVANCEBLOCK,
-&TA_DEF_CDLBELTHOLD,
-&TA_DEF_CDLBREAKAWAY,
-&TA_DEF_CDLCLOSINGMARUBOZU,
-&TA_DEF_CDLCONCEALBABYSWALL,
-&TA_DEF_CDLCOUNTERATTACK,
-&TA_DEF_CDLDARKCLOUDCOVER,
-&TA_DEF_CDLDOJI,
-&TA_DEF_CDLDOJISTAR,
-&TA_DEF_CDLDRAGONFLYDOJI,
-&TA_DEF_CDLENGULFING,
-&TA_DEF_CDLEVENINGDOJISTAR,
-&TA_DEF_CDLEVENINGSTAR,
-&TA_DEF_CDLGAPSIDESIDEWHITE,
-&TA_DEF_CDLGRAVESTONEDOJI,
-&TA_DEF_CDLHAMMER,
-&TA_DEF_CDLHANGINGMAN,
-&TA_DEF_CDLHARAMI,
-&TA_DEF_CDLHARAMICROSS,
-&TA_DEF_CDLHIGHWAVE,
-&TA_DEF_CDLHIKKAKE,
-&TA_DEF_CDLHIKKAKEMOD,
-&TA_DEF_CDLHOMINGPIGEON,
-&TA_DEF_CDLIDENTICAL3CROWS,
-&TA_DEF_CDLINNECK,
-&TA_DEF_CDLINVERTEDHAMMER,
-&TA_DEF_CDLKICKING,
-&TA_DEF_CDLKICKINGBYLENGTH,
-&TA_DEF_CDLLADDERBOTTOM,
-&TA_DEF_CDLLONGLEGGEDDOJI,
-&TA_DEF_CDLLONGLINE,
-&TA_DEF_CDLMARUBOZU,
-&TA_DEF_CDLMATCHINGLOW,
-&TA_DEF_CDLMATHOLD,
-&TA_DEF_CDLMORNINGDOJISTAR,
-&TA_DEF_CDLMORNINGSTAR,
-&TA_DEF_CDLONNECK,
-&TA_DEF_CDLPIERCING,
-&TA_DEF_CDLRICKSHAWMAN,
-&TA_DEF_CDLRISEFALL3METHODS,
-&TA_DEF_CDLSEPARATINGLINES,
-&TA_DEF_CDLSHOOTINGSTAR,
-&TA_DEF_CDLSHORTLINE,
-&TA_DEF_CDLSPINNINGTOP,
-&TA_DEF_CDLSTALLEDPATTERN,
-&TA_DEF_CDLSTICKSANDWICH,
-&TA_DEF_CDLTAKURI,
-&TA_DEF_CDLTASUKIGAP,
-&TA_DEF_CDLTHRUSTING,
-&TA_DEF_CDLTRISTAR,
-&TA_DEF_CDLUNIQUE3RIVER,
-&TA_DEF_CDLUPSIDEGAP2CROWS,
-&TA_DEF_CDLXSIDEGAP3METHODS,
-NULL };
-#define SIZE_GROUP_7 ((sizeof(TA_PerGroupFunc_7)/sizeof(const TA_FuncDef *))-1)
+    &TA_DEF_CDL2CROWS,           &TA_DEF_CDL3BLACKCROWS,
+    &TA_DEF_CDL3INSIDE,          &TA_DEF_CDL3LINESTRIKE,
+    &TA_DEF_CDL3OUTSIDE,         &TA_DEF_CDL3STARSINSOUTH,
+    &TA_DEF_CDL3WHITESOLDIERS,   &TA_DEF_CDLABANDONEDBABY,
+    &TA_DEF_CDLADVANCEBLOCK,     &TA_DEF_CDLBELTHOLD,
+    &TA_DEF_CDLBREAKAWAY,        &TA_DEF_CDLCLOSINGMARUBOZU,
+    &TA_DEF_CDLCONCEALBABYSWALL, &TA_DEF_CDLCOUNTERATTACK,
+    &TA_DEF_CDLDARKCLOUDCOVER,   &TA_DEF_CDLDOJI,
+    &TA_DEF_CDLDOJISTAR,         &TA_DEF_CDLDRAGONFLYDOJI,
+    &TA_DEF_CDLENGULFING,        &TA_DEF_CDLEVENINGDOJISTAR,
+    &TA_DEF_CDLEVENINGSTAR,      &TA_DEF_CDLGAPSIDESIDEWHITE,
+    &TA_DEF_CDLGRAVESTONEDOJI,   &TA_DEF_CDLHAMMER,
+    &TA_DEF_CDLHANGINGMAN,       &TA_DEF_CDLHARAMI,
+    &TA_DEF_CDLHARAMICROSS,      &TA_DEF_CDLHIGHWAVE,
+    &TA_DEF_CDLHIKKAKE,          &TA_DEF_CDLHIKKAKEMOD,
+    &TA_DEF_CDLHOMINGPIGEON,     &TA_DEF_CDLIDENTICAL3CROWS,
+    &TA_DEF_CDLINNECK,           &TA_DEF_CDLINVERTEDHAMMER,
+    &TA_DEF_CDLKICKING,          &TA_DEF_CDLKICKINGBYLENGTH,
+    &TA_DEF_CDLLADDERBOTTOM,     &TA_DEF_CDLLONGLEGGEDDOJI,
+    &TA_DEF_CDLLONGLINE,         &TA_DEF_CDLMARUBOZU,
+    &TA_DEF_CDLMATCHINGLOW,      &TA_DEF_CDLMATHOLD,
+    &TA_DEF_CDLMORNINGDOJISTAR,  &TA_DEF_CDLMORNINGSTAR,
+    &TA_DEF_CDLONNECK,           &TA_DEF_CDLPIERCING,
+    &TA_DEF_CDLRICKSHAWMAN,      &TA_DEF_CDLRISEFALL3METHODS,
+    &TA_DEF_CDLSEPARATINGLINES,  &TA_DEF_CDLSHOOTINGSTAR,
+    &TA_DEF_CDLSHORTLINE,        &TA_DEF_CDLSPINNINGTOP,
+    &TA_DEF_CDLSTALLEDPATTERN,   &TA_DEF_CDLSTICKSANDWICH,
+    &TA_DEF_CDLTAKURI,           &TA_DEF_CDLTASUKIGAP,
+    &TA_DEF_CDLTHRUSTING,        &TA_DEF_CDLTRISTAR,
+    &TA_DEF_CDLUNIQUE3RIVER,     &TA_DEF_CDLUPSIDEGAP2CROWS,
+    &TA_DEF_CDLXSIDEGAP3METHODS, NULL};
+#define SIZE_GROUP_7                                                           \
+  ((sizeof(TA_PerGroupFunc_7) / sizeof(const TA_FuncDef *)) - 1)
 
-const TA_FuncDef *TA_PerGroupFunc_8[] = {
-&TA_DEF_BETA,
-&TA_DEF_CORREL,
-&TA_DEF_LINEARREG,
-&TA_DEF_LINEARREG_ANGLE,
-&TA_DEF_LINEARREG_INTERCEPT,
-&TA_DEF_LINEARREG_SLOPE,
-&TA_DEF_STDDEV,
-&TA_DEF_TSF,
-&TA_DEF_VAR,
-NULL };
-#define SIZE_GROUP_8 ((sizeof(TA_PerGroupFunc_8)/sizeof(const TA_FuncDef *))-1)
+const TA_FuncDef *TA_PerGroupFunc_8[] = {&TA_DEF_BETA,
+                                         &TA_DEF_CORREL,
+                                         &TA_DEF_LINEARREG,
+                                         &TA_DEF_LINEARREG_ANGLE,
+                                         &TA_DEF_LINEARREG_INTERCEPT,
+                                         &TA_DEF_LINEARREG_SLOPE,
+                                         &TA_DEF_STDDEV,
+                                         &TA_DEF_TSF,
+                                         &TA_DEF_VAR,
+                                         NULL};
+#define SIZE_GROUP_8                                                           \
+  ((sizeof(TA_PerGroupFunc_8) / sizeof(const TA_FuncDef *)) - 1)
 
-const TA_FuncDef *TA_PerGroupFunc_9[] = {
-&TA_DEF_AVGPRICE,
-&TA_DEF_MEDPRICE,
-&TA_DEF_TYPPRICE,
-&TA_DEF_WCLPRICE,
-NULL };
-#define SIZE_GROUP_9 ((sizeof(TA_PerGroupFunc_9)/sizeof(const TA_FuncDef *))-1)
+const TA_FuncDef *TA_PerGroupFunc_9[] = {&TA_DEF_AVGPRICE, &TA_DEF_MEDPRICE,
+                                         &TA_DEF_TYPPRICE, &TA_DEF_WCLPRICE,
+                                         NULL};
+#define SIZE_GROUP_9                                                           \
+  ((sizeof(TA_PerGroupFunc_9) / sizeof(const TA_FuncDef *)) - 1)
 /* Generated */ const TA_FuncDef **TA_PerGroupFuncDef[10] = {
-&TA_PerGroupFunc_0[0],
-&TA_PerGroupFunc_1[0],
-&TA_PerGroupFunc_2[0],
-&TA_PerGroupFunc_3[0],
-&TA_PerGroupFunc_4[0],
-&TA_PerGroupFunc_5[0],
-&TA_PerGroupFunc_6[0],
-&TA_PerGroupFunc_7[0],
-&TA_PerGroupFunc_8[0],
-&TA_PerGroupFunc_9[0]
-/* Generated */ };
+    &TA_PerGroupFunc_0[0], &TA_PerGroupFunc_1[0], &TA_PerGroupFunc_2[0],
+    &TA_PerGroupFunc_3[0], &TA_PerGroupFunc_4[0], &TA_PerGroupFunc_5[0],
+    &TA_PerGroupFunc_6[0], &TA_PerGroupFunc_7[0], &TA_PerGroupFunc_8[0],
+    &TA_PerGroupFunc_9[0]
+    /* Generated */};
 
 /* Generated */ const unsigned int TA_PerGroupSize[10] = {
-SIZE_GROUP_0,
-SIZE_GROUP_1,
-SIZE_GROUP_2,
-SIZE_GROUP_3,
-SIZE_GROUP_4,
-SIZE_GROUP_5,
-SIZE_GROUP_6,
-SIZE_GROUP_7,
-SIZE_GROUP_8,
-SIZE_GROUP_9
-/* Generated */ };
+    SIZE_GROUP_0, SIZE_GROUP_1, SIZE_GROUP_2, SIZE_GROUP_3,
+    SIZE_GROUP_4, SIZE_GROUP_5, SIZE_GROUP_6, SIZE_GROUP_7,
+    SIZE_GROUP_8, SIZE_GROUP_9
+    /* Generated */};
 
 /* Generated */ const unsigned int TA_TotalNbFunction =
-SIZE_GROUP_0+
-SIZE_GROUP_1+
-SIZE_GROUP_2+
-SIZE_GROUP_3+
-SIZE_GROUP_4+
-SIZE_GROUP_5+
-SIZE_GROUP_6+
-SIZE_GROUP_7+
-SIZE_GROUP_8+
-SIZE_GROUP_9;
+    SIZE_GROUP_0 + SIZE_GROUP_1 + SIZE_GROUP_2 + SIZE_GROUP_3 + SIZE_GROUP_4 +
+    SIZE_GROUP_5 + SIZE_GROUP_6 + SIZE_GROUP_7 + SIZE_GROUP_8 + SIZE_GROUP_9;
 
 /***************/
 /* End of File */

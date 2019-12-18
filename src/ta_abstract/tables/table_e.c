@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'E' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -49,51 +49,37 @@
  ****************************************************************************/
 
 /* EMA BEGIN */
-static const TA_InputParameterInfo    *TA_EMA_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Real,
-  NULL
-};
+static const TA_InputParameterInfo *TA_EMA_Inputs[] = {&TA_DEF_UI_Input_Real,
+                                                       NULL};
 
-static const TA_OutputParameterInfo   *TA_EMA_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_EMA_Outputs[] = {&TA_DEF_UI_Output_Real,
+                                                         NULL};
 
-static const TA_OptInputParameterInfo *TA_EMA_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_30_MINIMUM2,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_EMA_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_30_MINIMUM2, NULL};
 
-DEF_FUNCTION( EMA,                        /* name */
-              TA_GroupId_OverlapStudies,  /* groupId */
-              "Exponential Moving Average", /* hint */
-              "Ema",                       /* CamelCase name */
-              TA_FUNC_FLG_OVERLAP|TA_FUNC_FLG_UNST_PER /* flags */
-             );
+DEF_FUNCTION(EMA,                                       /* name */
+             TA_GroupId_OverlapStudies,                 /* groupId */
+             "Exponential Moving Average",              /* hint */
+             "Ema",                                     /* CamelCase name */
+             TA_FUNC_FLG_OVERLAP | TA_FUNC_FLG_UNST_PER /* flags */
+);
 /* EMA END */
 
 /* EXP BEGIN */
-DEF_MATH_UNARY_OPERATOR( EXP, "Vector Arithmetic Exp", "Exp" )
+DEF_MATH_UNARY_OPERATOR(EXP, "Vector Arithmetic Exp", "Exp")
 /* EXP END */
 
 /****************************************************************************
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableE[] =
-{
-   ADD_TO_TABLE(EMA),
-   ADD_TO_TABLE(EXP),
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableE[] = {ADD_TO_TABLE(EMA), ADD_TO_TABLE(EXP),
+                                     NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableESize =
-              ((sizeof(TA_DEF_TableE)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableE) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other

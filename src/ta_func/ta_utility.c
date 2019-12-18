@@ -47,88 +47,88 @@
  *
  */
 
-#if defined( _MANAGED )
-   #using <mscorlib.dll>
-   #include "TA-Lib-Core.h"
-   #include "ta_memory.h"
-namespace TicTacTec { namespace TA { namespace Library {
+#if defined(_MANAGED)
+#using < mscorlib.dll>
+#include "TA-Lib-Core.h"
+#include "ta_memory.h"
+namespace TicTacTec {
+namespace TA {
+namespace Library {
 #else
-   #include "ta_utility.h"
-   #include "ta_func.h"
-   #include "ta_memory.h"
+#include "ta_func.h"
+#include "ta_memory.h"
+#include "ta_utility.h"
 #endif
 
-#if defined( _MANAGED )
- enum class Core::RetCode Core::SetUnstablePeriod(  enum class FuncUnstId id,
-                                                    unsigned int unstablePeriod )
+#if defined(_MANAGED)
+enum class Core::RetCode Core::SetUnstablePeriod(enum class FuncUnstId id,
+                                                 unsigned int unstablePeriod)
 #else
-TA_RetCode TA_SetUnstablePeriod( TA_FuncUnstId id,
-                                 unsigned int  unstablePeriod )
-#endif
-{
-   int i;
-
-   if( id > ENUM_VALUE(FuncUnstId,TA_FUNC_UNST_ALL,FuncUnstAll) )
-      return ENUM_VALUE(RetCode,TA_BAD_PARAM,BadParam);
-
-   if( id == ENUM_VALUE(FuncUnstId,TA_FUNC_UNST_ALL,FuncUnstAll) )
-   {
-      for( i=0; i < (int)ENUM_VALUE(FuncUnstId,TA_FUNC_UNST_ALL,FuncUnstAll); i++ )
-	  {		  
-         #if defined( _MANAGED )
-            Globals->unstablePeriod[(int)i] = unstablePeriod;
-         #else
-            TA_Globals->unstablePeriod[i] = unstablePeriod;   
-         #endif
-	  }
-   }
-   else
-   {
-         #if defined( _MANAGED )
-            Globals->unstablePeriod[(int)id] = unstablePeriod;
-         #else
-            TA_Globals->unstablePeriod[id] = unstablePeriod;   
-         #endif      
-   }
-
-   return ENUM_VALUE(RetCode,TA_SUCCESS,Success);
-}
-
-#if defined( _MANAGED )
-unsigned int Core::GetUnstablePeriod( enum class FuncUnstId id )
-#else
-unsigned int TA_GetUnstablePeriod( TA_FuncUnstId id )
+TA_RetCode TA_SetUnstablePeriod(TA_FuncUnstId id, unsigned int unstablePeriod)
 #endif
 {
-   if( id >= ENUM_VALUE(FuncUnstId,TA_FUNC_UNST_ALL,FuncUnstAll) )
-	   return 0;
+  int i;
 
-   #if defined( _MANAGED )
-      return Globals->unstablePeriod[(int)id];
-   #else
-      return TA_Globals->unstablePeriod[id];
-   #endif
+  if (id > ENUM_VALUE(FuncUnstId, TA_FUNC_UNST_ALL, FuncUnstAll))
+    return ENUM_VALUE(RetCode, TA_BAD_PARAM, BadParam);
+
+  if (id == ENUM_VALUE(FuncUnstId, TA_FUNC_UNST_ALL, FuncUnstAll)) {
+    for (i = 0; i < (int)ENUM_VALUE(FuncUnstId, TA_FUNC_UNST_ALL, FuncUnstAll);
+         i++) {
+#if defined(_MANAGED)
+      Globals->unstablePeriod[(int)i] = unstablePeriod;
+#else
+      TA_Globals->unstablePeriod[i] = unstablePeriod;
+#endif
+    }
+  } else {
+#if defined(_MANAGED)
+    Globals->unstablePeriod[(int)id] = unstablePeriod;
+#else
+    TA_Globals->unstablePeriod[id] = unstablePeriod;
+#endif
+  }
+
+  return ENUM_VALUE(RetCode, TA_SUCCESS, Success);
 }
 
-#if defined( _MANAGED )
- enum class Core::RetCode Core::SetCompatibility(  enum class Compatibility value )
+#if defined(_MANAGED)
+unsigned int Core::GetUnstablePeriod(enum class FuncUnstId id)
 #else
-TA_RetCode TA_SetCompatibility( TA_Compatibility value )
+unsigned int TA_GetUnstablePeriod(TA_FuncUnstId id)
 #endif
 {
-   TA_GLOBALS_COMPATIBILITY = value;
-   return ENUM_VALUE(RetCode,TA_SUCCESS,Success);
+  if (id >= ENUM_VALUE(FuncUnstId, TA_FUNC_UNST_ALL, FuncUnstAll))
+    return 0;
+
+#if defined(_MANAGED)
+  return Globals->unstablePeriod[(int)id];
+#else
+  return TA_Globals->unstablePeriod[id];
+#endif
 }
 
-#if defined( _MANAGED )
- enum class Core::Compatibility Core::GetCompatibility( void )
+#if defined(_MANAGED)
+enum class Core::RetCode Core::SetCompatibility(enum class Compatibility value)
 #else
-TA_Compatibility TA_GetCompatibility( void )
+TA_RetCode TA_SetCompatibility(TA_Compatibility value)
 #endif
 {
-   return TA_GLOBALS_COMPATIBILITY;
+  TA_GLOBALS_COMPATIBILITY = value;
+  return ENUM_VALUE(RetCode, TA_SUCCESS, Success);
 }
 
-#if defined( _MANAGED )
-}}} // Close namespace TicTacTec::TA::Lib
+#if defined(_MANAGED)
+enum class Core::Compatibility Core::GetCompatibility(void)
+#else
+TA_Compatibility TA_GetCompatibility(void)
+#endif
+{
+  return TA_GLOBALS_COMPATIBILITY;
+}
+
+#if defined(_MANAGED)
+}
+}
+} // Close namespace TicTacTec::TA::Lib
 #endif

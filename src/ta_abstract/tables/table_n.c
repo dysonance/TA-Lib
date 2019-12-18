@@ -34,9 +34,9 @@
 /*********************************************************************
  * This file contains only TA functions starting with the letter 'N' *
  *********************************************************************/
-#include <stddef.h>
 #include "ta_abstract.h"
 #include "ta_def_ui.h"
+#include <stddef.h>
 
 /* Follow the 3 steps defined below for adding a new TA Function to this
  * file.
@@ -49,29 +49,21 @@
  ****************************************************************************/
 
 /* NATR BEGIN */
-static const TA_InputParameterInfo    *TA_NATR_Inputs[]    =
-{
-  &TA_DEF_UI_Input_Price_HLC,
-  NULL
-};
+static const TA_InputParameterInfo *TA_NATR_Inputs[] = {
+    &TA_DEF_UI_Input_Price_HLC, NULL};
 
-static const TA_OutputParameterInfo   *TA_NATR_Outputs[]   =
-{
-  &TA_DEF_UI_Output_Real,
-  NULL
-};
+static const TA_OutputParameterInfo *TA_NATR_Outputs[] = {
+    &TA_DEF_UI_Output_Real, NULL};
 
-static const TA_OptInputParameterInfo *TA_NATR_OptInputs[] =
-{ &TA_DEF_UI_TimePeriod_14,
-  NULL
-};
+static const TA_OptInputParameterInfo *TA_NATR_OptInputs[] = {
+    &TA_DEF_UI_TimePeriod_14, NULL};
 
-DEF_FUNCTION( NATR,                        /* name */
-              TA_GroupId_VolatilityIndicators, /* groupId */
-              "Normalized Average True Range", /* hint */
-              "Natr",                     /* CamelCase name */
-              TA_FUNC_FLG_UNST_PER        /* flags */
-             );
+DEF_FUNCTION(NATR,                            /* name */
+             TA_GroupId_VolatilityIndicators, /* groupId */
+             "Normalized Average True Range", /* hint */
+             "Natr",                          /* CamelCase name */
+             TA_FUNC_FLG_UNST_PER             /* flags */
+);
 /* NATR END */
 
 #if 0
@@ -108,17 +100,11 @@ DEF_FUNCTION( NVI,                     /* name */
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
  ****************************************************************************/
-const TA_FuncDef *TA_DEF_TableN[] =
-{
-   ADD_TO_TABLE(NATR),
-   NULL
-};
-
+const TA_FuncDef *TA_DEF_TableN[] = {ADD_TO_TABLE(NATR), NULL};
 
 /* Do not modify the following line. */
 const unsigned int TA_DEF_TableNSize =
-              ((sizeof(TA_DEF_TableN)/sizeof(TA_FuncDef *))-1);
-
+    ((sizeof(TA_DEF_TableN) / sizeof(TA_FuncDef *)) - 1);
 
 /****************************************************************************
  * Step 3 - Make sure "gen_code" is executed for generating all other
