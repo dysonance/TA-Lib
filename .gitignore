@@ -1,5 +1,6 @@
 # workflow configurations
 tags
+.syntastic*
 
 # exhaust from running configure script
 **/Makefile
